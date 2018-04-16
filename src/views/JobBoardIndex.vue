@@ -1,28 +1,24 @@
 <template>
     <div class="layout">
         <Layout>
-            <nav-header>
-            </nav-header>
-
-            <Content :style="{margin: '88px 20px 0', background: '#fff', minHeight: '500px'}">
-                Content
-            </Content>
-            <Footer class="layout-footer-center">2011-2016 &copy; TalkingData</Footer>
+            <nav-header></nav-header>
+            <nav-content></nav-content>
+            <nav-footer></nav-footer>
         </Layout>
     </div>
 </template>
 
 <script>
-    import NavHeader from '../components/Header.vue'
-
-
-
+    import NavHeader from '@/components/Header.vue'
+    import NavContent from '@/components/Content.vue'
+    import NavFooter from '@/components/Footer.vue'
 
     export default {
         components:{
             NavHeader,  // 沒有用key valu 會自動生成key和value名稱相同
+            NavContent,
+            NavFooter
         }
-        
     }
 </script>
 
@@ -33,8 +29,5 @@
         position: relative;
         border-radius: 4px;
         overflow: hidden;
-    }
-    .layout-footer-center{
-        text-align: center;
     }
 </style>
